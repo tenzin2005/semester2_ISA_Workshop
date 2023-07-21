@@ -2,44 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='script.js'></script>
-    <title>Simple Interest Calculator</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <header>
-        <nav>
-
-        </nav>
-    </header>
-    <div class="maindiv">
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="range"  id="rate" min="1" max="20" value="10.25" step="0.25" onchange="updateRate()"> <span id="rate_val">10.25</span>%  <br/>
-        <label for="years">No. of Years:</label>
-        <select id="years">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-        <br>
-
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute Interest</button>
+    <div class="card"> 
+        <div class="search">
+            <input type="text" id="search-bar" placeholder="Search">
+            <button type="submit" onclick="fetchWeather()">Search</button>
+        </div>
+        <div id="weatherInfo">
+            <h2 id="city">Weather in Cambridgeshire</h2>
+            <div class="desc-icon">
+                <div id="dec">
+                    <div id="temperature">20°C</div>
+                    <div id="description">Broken clouds</div>
+                    <div id="pressure">Pressure: 1013 hPa</div>
+                    <div id="humidity">Humidity: 60%</div>
+                    <div id="wind">Wind: 60 km/h</div>
+                </div>
+                <div id="icon">
+                    <img src="" id="weather-icon" alt="weather-icon" width="150px" height="120px">
+                </div>
+            </div>
+            
+            
+        </div>
     </div>
-    <footer>
-        <p>&copy; This Calculator belongs to Tenzin Norbu Lama</p>
-    </footer>
+    <i class="wi wi-day-sunny icon" id="weather-icon"></i>
+
+    <script src="script.js"></script>
 </body>
 </html>
